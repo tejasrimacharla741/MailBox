@@ -1,0 +1,15 @@
+<div class="email-list-item" (click)="onClick()" [ngClass]="{ 'email-list-item--active': isActive }">
+  <div class="email-header">
+    <img [src]="avatarUrl" alt="User Avatar"
+                    class="user-profile-card__avatar">
+    <div class="sender-subject-container">
+      <span>{{ sender }}</span>
+      <span class="email-subject">{{ subject }}</span>
+    </div>
+    <span class="email-date">{{ date }}</span>
+  </div>
+  <div class="email-snippet">{{ snippet }}</div>
+  <div class="email-attachments" *ngIf="attachmentsCount">
+    📎 {{ attachmentsCount }} Attachment{{ attachmentsCount > 1 ? 's' : '' }}
+  </div>
+</div>

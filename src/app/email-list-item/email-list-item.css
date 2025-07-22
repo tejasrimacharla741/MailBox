@@ -1,0 +1,66 @@
+.email-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border-left: 4px solid transparent;
+}
+
+.email-list-item--active {
+  border-left-color: #007bff;
+  background-color: #f0f8ff;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.15);
+}
+
+.email-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.email-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.email-subject {
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+  display: flex;
+}
+
+.email-snippet {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.email-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.email-attachments {
+  font-size: 12px;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+.user-profile-card__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures image covers the area */
+    margin-right: 15px;
+    border: 1px solid #e0e0e0; /* Subtle border */
+}

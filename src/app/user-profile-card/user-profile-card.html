@@ -1,0 +1,99 @@
+<div class="app-container">
+    <aside class="left-sidebar">
+        <div class="user-profile-card">
+            <img src="assets/images/mike.png" alt="User Avatar" class="user-profile-card__avatar">
+            <div class="user-profile-card__info">
+                <h3 class="user-profile-card__name">Mike Manson</h3>
+                <p class="user-profile-card__email">iamkiran@gmail.com</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#" class="navigation-item" [class.navigation-item--active]="activePage === 'Inbox'"
+                (click)="setActivePage('Inbox')">
+                <!-- <span class="navigation-item__icon">✉️</span> -->
+                <img src="assets/images/Navbar/inbox.png" alt="Inbox Icon" class="navigation-item__icon" />
+                <span class="navigation-item__text">Inbox</span>
+                <span class="navigation-item__badge">{{inboxCount}}</span>
+            </a>
+            <a href="#" class="navigation-item" [class.navigation-item--active]="activePage === 'Flagged'"
+                (click)="setActivePage('Flagged')">
+                <!-- <span class="navigation-item__icon">⭐</span> -->
+                <img src="assets/images/Navbar/flagged.png" alt="Flagged Icon" class="navigation-item__icon" />
+                <span class="navigation-item__text">Flagged</span>
+            </a>
+            <a href="#" class="navigation-item" [class.navigation-item--active]="activePage === 'Draft'"
+                (click)="setActivePage('Draft')">
+                <!-- <span class="navigation-item__icon">📝</span> -->
+                <img src="assets/images/Navbar/draft.png" alt="Draft Icon" class="navigation-item__icon" />
+                <span class="navigation-item__text">Draft</span>
+            </a>
+            <a href="#" class="navigation-item" [class.navigation-item--active]="activePage === 'Sent'"
+                (click)="setActivePage('Sent')">
+                <!-- <span class="navigation-item__icon">📤</span> -->
+                <img src="assets/images/Navbar/sent.png" alt="Sent Icon" class="navigation-item__icon" />
+                <span class="navigation-item__text">Sent</span>
+            </a>
+            <a href="#" class="navigation-item" [class.navigation-item--active]="activePage === 'Trash'"
+                (click)="setActivePage('Trash')">
+                <!-- <span class="navigation-item__icon">🗑️</span> -->
+                <img src="assets/images/Navbar/trash.png" alt="Trash Icon" class="navigation-item__icon" />
+                <span class="navigation-item__text">Trash</span>
+            </a>
+            <a href="#" class="navigation-item" [class.navigation-item--active]="activePage === 'More'"
+                (click)="setActivePage('More')">
+                <!-- <span class="navigation-item__icon">⋮</span> -->
+                <img src="assets/images/Navbar/flagged.png" alt="Flagged Icon" class="navigation-item__icon" />
+                <span class="navigation-item__text">More</span>
+            </a>
+        </nav>
+
+        <div class="section-header">
+            <span class="section-header__title">Folders</span>
+            <button class="section-header__add-button">Add</button>
+        </div>
+        <nav>
+            <a href="#" class="navigation-item">
+                <!-- <span class="navigation-item__icon">📁</span> -->
+                <img src="assets/images/Navbar/office.png" alt="Office Icon" class="navigation-item__icon" />
+                <span class="navigation-item__text">Office</span>
+            </a>
+            <a href="#" class="navigation-item">
+                <!-- <span class="navigation-item__icon">💼</span> -->
+                <img src="assets/images/Navbar/personal.png" alt="Personal Icon" class="navigation-item__icon" />
+                <span class="navigation-item__text">Personal</span>
+            </a><a href="#" class="navigation-item">
+                <!-- <span class="navigation-item__icon">💼</span> -->
+                <img src="assets/images/Navbar/freelance.png" alt="Freelance Icon" class="navigation-item__icon" />
+                <span class="navigation-item__text">Freelance</span>
+            </a>
+        </nav>
+    </aside>
+
+    <div class="middle-column">
+        <div class="search-bar">
+            <span class="search-bar__icon">🔍</span>
+            <input type="text" class="search-bar__input" placeholder="Search">
+        </div>
+
+        <div class="under-construction-message" *ngIf="activePage !== 'Inbox'">
+            <h2>🚧 Page under construction</h2>
+            <p>The "{{ activePage }}" section is coming soon.</p>
+        </div>
+        <div class="email-list" *ngIf="activePage === 'Inbox'">
+            <app-email-list-item *ngFor="let email of emails; let i = index" [avatarUrl]="email.avatarUrl"
+                [sender]="email.sender" [date]="email.date" [subject]="email.subject" [snippet]="email.snippet"
+                [email]="email" (emailSelected)="onEmailSelected($event)" [attachmentsCount]="email.attachmentsCount"
+                [isActive]="!email.isRead && activePage === 'Inbox'"></app-email-list-item>
+        </div>
+    </div>
+    <div *ngIf="activePage === 'Inbox'">
+        <div style="margin-bottom: 20px; margin-left: 105px">
+            <img src="assets/images/Navbar/backbutton.png" alt="back Icon" class="back-icon"/>
+        </div>
+        <app-email-details *ngIf="selectedEmail" [senderName]="selectedEmail.sender"
+            [senderEmail]="selectedEmail.senderEmail" [date]="selectedEmail.date" [avatarUrl]="selectedEmail.avatarUrl"
+            [body]="selectedEmail.body" [attachments]="mappedAttachments"></app-email-details>
+    </div>
+
+</div>

@@ -1,0 +1,51 @@
+[
+  {
+    "avatarUrl": "assets/images/sam.png",
+    "sender": "Sam Miller",
+    "senderEmail": "sammiller@gmail.com",
+    "date": "Today 08:45 PM",
+    "subject": "Portfolio",
+    "snippet": "Stop wasting time looking for files buried in folders. Visually organize all your assets in one place",
+    "body": "Hi Mike,\nStop wasting time looking for files buried in folders. Visualize all your assets in one.",
+    "attachmentsCount": 4,
+    "attachments": [
+      { "url": "assets/images/pexels-photo-2977302.png", "name": "Att1" },
+      { "url": "assets/images/pexels-photo-2923672.png", "name": "Att2" },
+      { "url": "assets/images/pexels-photo-2533686@2x.png", "name": "Att3" },
+      { "url": "assets/images/pexels-photo-2694453@2x.png", "name": "Att4" }
+    ]
+  },
+  {
+    "avatarUrl": "assets/images/lily.png",
+    "sender": "Lily Jones",
+    "senderEmail": "lilyjones@example.com",
+    "date": "Yesterday 01:11 PM",
+    "subject": "Invitations",
+    "snippet": "Its always a pleasure to have you all at my birthday parties. So, please dont be late for this one.",
+    "body": "Hope you can make it this time, looking forward to it!",
+    "attachmentsCount": 0,
+    "attachments": []
+  },
+  {
+      "avatarUrl": "assets/images/smith.png",
+      "sender": "Smith",
+      "senderEmail": "smith@example.com",
+      "date": "Monday 06:45 PM",
+      "subject": "Assignment Submission",
+      "snippet": "If you want to set up an assignment with additional reviews, you can enable Moderated Grading",
+      "body": "Please review the attached assignment for moderation.",
+      "attachmentsCount": 0,
+      "attachments": []
+    },
+    {
+      "avatarUrl": "assets/images/patrick.png",
+      "sender": "Partick",
+      "senderEmail": "partick@example.com",
+      "date": "Monday 05:45 PM",
+      "subject": "Interview Scheduled",
+      "snippet": "Hi Mike, thanks for applying for UI/UX Designer. We are reviewing resume",
+      "body": "Please review the attached assignment for moderation...",
+      "attachmentsCount": 0,
+      "attachments": []
+    }
+]

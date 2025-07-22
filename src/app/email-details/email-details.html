@@ -1,0 +1,30 @@
+<section class="right-column">
+  <div class="email-detail-header">
+    <div class="email-detail-header__sender-info">
+      <img [src]="avatarUrl" alt="Sender Avatar" class="email-detail-header__avatar">
+      <div class="email-detail-header__text">
+          <span class="email-detail-header__name">{{ senderName }}</span>
+          <span class="email-detail-header__email">{{ senderEmail }}</span>
+      </div>
+    </div>
+    <div class="email-detail-header__actions">
+      <span class="email-detail-header__date">{{ date }}</span>      
+    </div>
+  </div>
+
+  <h2 style="font-size: 1.5em; color: #333; margin-bottom: 15px;">Hi Mike,</h2>
+  <p style="font-size: 0.95em; line-height: 1.6; color: #555;">
+    {{ body }}
+  </p>
+
+  <div class="attachment-grid">
+    <div class="attachment-grid__header">
+      <span class="attachment-grid__title">{{ attachments.length }} Attachments</span>
+    </div>
+    <div class="attachment-grid__items">
+      <div *ngFor="let att of attachments" class="attachment-grid__item">
+        <img [src]="att.url" [alt]="att.alt" class="attachment-grid__thumbnail">
+      </div>
+    </div>
+  </div>
+</section>
