@@ -18,6 +18,7 @@ export class EmailListItem {
   @Input() isActive: boolean = false;
   @Output() emailSelected = new EventEmitter<Email>();
   @Input() email: any;
+  
   onClick() {
     this.isActive = false;
     this.emailSelected.emit(this.email);

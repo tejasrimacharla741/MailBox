@@ -33,7 +33,7 @@ export class UserProfileCard {
         this.allRecords = this.emails = data;
         this.inboxCount = data.filter(email => email.isRead).length;
         if (this.emails.length > 0) {
-          this.selectedEmail = this.emails[0]; // Select the first email
+          this.selectedEmail = this.emails[0];
           this.selectedEmail.isRead = false;
           this.inboxCount--;
         }

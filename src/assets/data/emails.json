@@ -10,10 +10,22 @@
     "isRead": "false",
     "attachmentsCount": 4,
     "attachments": [
-      { "url": "assets/images/pexels-photo-2977302.png", "name": "Att1" },
-      { "url": "assets/images/pexels-photo-2923672.png", "name": "Att2" },
-      { "url": "assets/images/pexels-photo-2533686@2x.png", "name": "Att3" },
-      { "url": "assets/images/pexels-photo-2694453@2x.png", "name": "Att4" }
+      {
+        "url": "assets/images/pexels-photo-2977302.png",
+        "name": "Att1"
+      },
+      {
+        "url": "assets/images/pexels-photo-2923672.png",
+        "name": "Att2"
+      },
+      {
+        "url": "assets/images/pexels-photo-2533686@2x.png",
+        "name": "Att3"
+      },
+      {
+        "url": "assets/images/pexels-photo-2694453@2x.png",
+        "name": "Att4"
+      }
     ]
   },
   {
@@ -29,27 +41,27 @@
     "attachments": []
   },
   {
-      "avatarUrl": "assets/images/smith.png",
-      "sender": "Smith",
-      "senderEmail": "smith@example.com",
-      "date": "Monday 06:45 PM",
-      "subject": "Assignment Submission",
-      "snippet": "If you want to set up an assignment with additional reviews, you can enable Moderated Grading",
-      "body": "Please review the attached assignment for moderation.",
-      "isRead": "false",
-      "attachmentsCount": 0,
-      "attachments": []
-    },
-    {
-      "avatarUrl": "assets/images/patrick.png",
-      "sender": "Partick",
-      "senderEmail": "partick@example.com",
-      "date": "Monday 05:45 PM",
-      "subject": "Interview Scheduled",
-      "snippet": "Hi Mike, thanks for applying for UI/UX Designer. We are reviewing resume",
-      "body": "Please review the attached assignment for moderation...",
-      "isRead": "false",
-      "attachmentsCount": 0,
-      "attachments": []
-    }
+    "avatarUrl": "assets/images/smith.png",
+    "sender": "Smith",
+    "senderEmail": "smith@example.com",
+    "date": "Monday 06:45 PM",
+    "subject": "Assignment Submission",
+    "snippet": "If you want to set up an assignment with additional reviews, you can enable Moderated Grading",
+    "body": "Please review the attached assignment for moderation.",
+    "isRead": "false",
+    "attachmentsCount": 0,
+    "attachments": []
+  },
+  {
+    "avatarUrl": "assets/images/patrick.png",
+    "sender": "Partick",
+    "senderEmail": "partick@example.com",
+    "date": "Monday 05:45 PM",
+    "subject": "Interview Scheduled",
+    "snippet": "Hi Mike, thanks for applying for UI/UX Designer. We are reviewing resume",
+    "body": "Please review the attached assignment for moderation...",
+    "isRead": "false",
+    "attachmentsCount": 0,
+    "attachments": []
+  }
 ]

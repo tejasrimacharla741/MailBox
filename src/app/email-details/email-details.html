@@ -12,12 +12,10 @@
       <span class="email-detail-header__date">{{ date }}</span>
     </div>
   </div>
-
   <h2 style="font-size: 1.5em; color: #333; margin-bottom: 15px;">Hi Mike,</h2>
   <p style="font-size: 0.95em; line-height: 1.6; color: #555;">
     {{ body }}
   </p>
-
   <div class="attachment-grid">
     <div class="attachment-grid__header">
       <span class="attachment-grid__title">{{ attachments.length }} Attachments</span>
@@ -33,12 +31,12 @@
       </button>
     </div>
     <div class="message-input">
-    <input type="text" placeholder="Type Message..." />
-    <label class="attachment-icon">
-      📎
-      <input type="file" hidden />
-    </label>
-    <button class="send-button">📤</button>
-  </div>
+      <input type="text" placeholder="Type Message..." />
+      <label class="attachment-icon">
+        📎
+        <input type="file" hidden />
+      </label>
+      <button class="send-button">📤</button>
+    </div>
   </div>
 </section>

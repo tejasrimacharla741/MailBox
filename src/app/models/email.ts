@@ -7,13 +7,11 @@ export interface Email {
   isRead?: boolean;
   attachmentsCount?: number;
 }
-
 export interface Attachment {
   url: string;
   name?: string;
   alt?: string;
 }
-
 export interface Email {
   avatarUrl: string;
   sender: string;
@@ -22,6 +20,6 @@ export interface Email {
   subject: string;
   snippet: string;
   body: string;
-  attachmentsCount?: number;  // no modifiers like public/private
+  attachmentsCount?: number;
   attachments?: Attachment[];
 }

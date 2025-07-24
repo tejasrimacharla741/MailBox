@@ -87,8 +87,7 @@
             <app-email-list-item *ngFor="let email of emails; let i = index" [avatarUrl]="email.avatarUrl"
                 [sender]="email.sender" [date]="email.date" [subject]="email.subject" [snippet]="email.snippet"
                 [email]="email" [attachmentsCount]="email.attachmentsCount"
-                [isActive]="!!email.isRead && activePage === 'Inbox'"
-                 (emailSelected)="onEmailSelected($event)">
+                [isActive]="!!email.isRead && activePage === 'Inbox'" (emailSelected)="onEmailSelected($event)">
             </app-email-list-item>
         </div>
     </div>

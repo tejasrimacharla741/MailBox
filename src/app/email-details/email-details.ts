@@ -27,13 +27,13 @@ export class EmailDetails {
     this.checkScreenSize();
   }
   onBack() {
-    this.backToList.emit(); // 👈 Emit back event
+    this.backToList.emit();
   }
 
   checkScreenSize() {
-    this.isMobileView = window.innerWidth <= 768; // adjust breakpoint if needed
+    this.isMobileView = window.innerWidth <= 768;
   }
-  
+
   downloadAllAttachments() {
     this.attachments.forEach((att: { url: string, alt: string }) => {
       this.downloadFile(att.url, att.alt || 'attachment');
