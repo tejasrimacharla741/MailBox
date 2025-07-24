@@ -24,6 +24,7 @@ export class UserProfileCard {
   allRecords: Email[] = [];
   showSidebar: boolean = false;
   isMobileView: boolean = false;
+  hide: boolean = false;
 
   constructor(private http: HttpClient, private composeService: ComposeService) { }
 
@@ -32,7 +33,7 @@ export class UserProfileCard {
       .subscribe((data) => {
         this.allRecords = this.emails = data;
         this.inboxCount = data.filter(email => email.isRead).length;
-        if (this.emails.length > 0) {
+        if (this.emails.length > 0 && !this.isMobileView) {
           this.selectedEmail = this.emails[0];
           this.selectedEmail.isRead = false;
           this.inboxCount--;
@@ -42,6 +43,8 @@ export class UserProfileCard {
   }
 
   toggleSidebar() {
+    if(this.activePage == 'Inbox')
+      this.hide = false;
     this.showSidebar = !this.showSidebar;
   }
 
@@ -79,6 +82,7 @@ export class UserProfileCard {
     if (window.innerWidth <= 768) {
       this.showSidebar = false;
       this.isMobileView = true;
+      this.hide = true;
     }
     this.selectedEmail = email;
   }
@@ -98,5 +102,9 @@ export class UserProfileCard {
   }
   openCompose() {
     this.composeService.open();
+  }
+  onBackToList(){
+    this.hide = false;
+    this.selectedEmail = null;
   }
 }

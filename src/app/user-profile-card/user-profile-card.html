@@ -72,7 +72,7 @@
         </div>
     </aside>
 
-    <div class="middle-column">
+    <div class="middle-column" *ngIf="!hide">
         <div class="search-bar-container">
             <input type="text" placeholder="Search" class="search-bar" [(ngModel)]="searchTerm"
                 (input)="onSearchChange()" />
@@ -99,7 +99,7 @@
         <div class="email-details-wrapper" *ngIf="selectedEmail && activePage === 'Inbox'">
             <app-email-details [senderName]="selectedEmail.sender" [senderEmail]="selectedEmail.senderEmail"
                 [date]="selectedEmail.date" [avatarUrl]="selectedEmail.avatarUrl" [body]="selectedEmail.body"
-                [attachments]="mappedAttachments" (backToList)="selectedEmail = null">
+                [attachments]="mappedAttachments" (backToList)="onBackToList()">
             </app-email-details>
         </div>
     </div>
