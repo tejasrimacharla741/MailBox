@@ -1,0 +1,77 @@
+$email-primary: #007bff;
+$email-bg: #ffffff;
+$email-hover-bg: #f0f8ff;
+$email-shadow: rgba(0, 0, 0, 0.05);
+$email-hover-shadow: rgba(0, 0, 0, 0.08);
+$email-active-shadow: rgba(0, 123, 255, 0.15);
+
+.email-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background-color: $email-bg;
+  box-shadow: 0 4px 8px $email-shadow;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border-left: 4px solid transparent;
+
+  &--active {
+    border-left-color: $email-primary;
+    background-color: $email-hover-bg;
+    box-shadow: 0 6px 12px $email-active-shadow;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px $email-hover-shadow;
+  }
+
+  .email-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .email-subject {
+    font-size: 14px;
+    color: #444;
+    font-weight: 500;
+    display: flex;
+  }
+
+  .email-snippet {
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+    margin-left: 55px;
+  }
+
+  .email-date {
+    font-size: 12px;
+    color: #333;
+    margin-left: auto;
+  }
+
+  .email-attachments {
+    font-size: 12px;
+    color: $email-primary;
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    margin-left: 55px;
+  }
+}
+
+.user-profile-card__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 1px solid #e0e0e0;
+}

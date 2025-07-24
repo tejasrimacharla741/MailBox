@@ -6,7 +6,7 @@ import { Email } from '../models/email';
   selector: 'app-email-list-item',
   imports: [CommonModule],
   templateUrl: './email-list-item.html',
-  styleUrl: './email-list-item.css'
+  styleUrl: './email-list-item.scss'
 })
 export class EmailListItem {
   @Input() avatarUrl!: string;

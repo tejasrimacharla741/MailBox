@@ -7,6 +7,7 @@
     "subject": "Portfolio",
     "snippet": "Stop wasting time looking for files buried in folders. Visually organize all your assets in one place",
     "body": "Hi Mike,\nStop wasting time looking for files buried in folders. Visualize all your assets in one.",
+    "isRead": "false",
     "attachmentsCount": 4,
     "attachments": [
       { "url": "assets/images/pexels-photo-2977302.png", "name": "Att1" },
@@ -23,6 +24,7 @@
     "subject": "Invitations",
     "snippet": "Its always a pleasure to have you all at my birthday parties. So, please dont be late for this one.",
     "body": "Hope you can make it this time, looking forward to it!",
+    "isRead": "false",
     "attachmentsCount": 0,
     "attachments": []
   },
@@ -34,6 +36,7 @@
       "subject": "Assignment Submission",
       "snippet": "If you want to set up an assignment with additional reviews, you can enable Moderated Grading",
       "body": "Please review the attached assignment for moderation.",
+      "isRead": "false",
       "attachmentsCount": 0,
       "attachments": []
     },
@@ -45,6 +48,7 @@
       "subject": "Interview Scheduled",
       "snippet": "Hi Mike, thanks for applying for UI/UX Designer. We are reviewing resume",
       "body": "Please review the attached assignment for moderation...",
+      "isRead": "false",
       "attachmentsCount": 0,
       "attachments": []
     }

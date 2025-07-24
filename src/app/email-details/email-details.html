@@ -1,14 +1,15 @@
+<button class="back-btn-mobile" *ngIf="isMobileView" (click)="onBack()">← Back to List</button>
 <section class="right-column">
   <div class="email-detail-header">
     <div class="email-detail-header__sender-info">
       <img [src]="avatarUrl" alt="Sender Avatar" class="email-detail-header__avatar">
       <div class="email-detail-header__text">
-          <span class="email-detail-header__name">{{ senderName }}</span>
-          <span class="email-detail-header__email">{{ senderEmail }}</span>
+        <span class="email-detail-header__name">{{ senderName }}</span>
+        <span class="email-detail-header__email">{{ senderEmail }}</span>
       </div>
     </div>
     <div class="email-detail-header__actions">
-      <span class="email-detail-header__date">{{ date }}</span>      
+      <span class="email-detail-header__date">{{ date }}</span>
     </div>
   </div>
 
@@ -26,5 +27,18 @@
         <img [src]="att.url" [alt]="att.alt" class="attachment-grid__thumbnail">
       </div>
     </div>
+    <div class="download-button" *ngIf="attachments.length > 0">
+      <button (click)="downloadAllAttachments()" class="download-button">
+        Download
+      </button>
+    </div>
+    <div class="message-input">
+    <input type="text" placeholder="Type Message..." />
+    <label class="attachment-icon">
+      📎
+      <input type="file" hidden />
+    </label>
+    <button class="send-button">📤</button>
+  </div>
   </div>
 </section>

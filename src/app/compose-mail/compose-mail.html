@@ -1,0 +1,12 @@
+<div class="compose-container" *ngIf="isOpen">
+  <div class="compose-header">
+    <span>New Message</span>
+    <button class="close-btn" (click)="close()">×</button>
+  </div>
+  <div class="compose-body">
+    <input placeholder="To" class="input" />
+    <input placeholder="Subject" class="input" />
+    <textarea placeholder="Message" class="textarea"></textarea>
+    <button class="send-button">Send</button>
+  </div>
+</div>
